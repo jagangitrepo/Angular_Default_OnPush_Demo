@@ -2,8 +2,8 @@ import { Component, Input, OnChanges, SimpleChanges, DoCheck, ChangeDetectionStr
 
 @Component({
   selector: 'subchild',
-  template: `<h3>Name: {{name}}</h3> <p>{{ check() }}</p> <button (click)="triigerchange()">TriggerEvent</button>`,
-  styles: [`h1 { font-family: Lato; }`]
+  template: `<h3>Name: {{name}}</h3> <p>{{ check() }}</p> <button (click)="0">TriggerEvent</button>`,
+  styles: [`h1 { font-family: Lato; }`],
 })
 export class SubChildComponent implements OnChanges, DoCheck, OnInit, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, OnDestroy {
   @Input()

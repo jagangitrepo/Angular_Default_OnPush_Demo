@@ -3,7 +3,8 @@ import { Component, Input, OnChanges, SimpleChanges, DoCheck, ChangeDetectionStr
 @Component({
   selector: 'child',
   template: `<subchild [name]="subchild1"></subchild>  <subchild [name]="subchild2"></subchild> <p>{{ check() }}</p> `,
-  styles: [`h1 { font-family: Lato; }`], 
+  styles: [`h1 { font-family: Lato; }`],
+  changeDetection:ChangeDetectionStrategy.OnPush  
 })
 export class ChildComponent implements OnChanges, DoCheck, OnInit, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, OnDestroy {
   @Input()
