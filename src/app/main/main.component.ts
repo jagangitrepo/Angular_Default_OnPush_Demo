@@ -4,7 +4,7 @@ import { Component, OnChanges, SimpleChanges, DoCheck, ChangeDetectionStrategy, 
   selector: 'main',
   template: `<child [name]="child1"></child>  <child [name]="child2"></child> <p>{{ check() }}</p>`,
   styles: [`h1 { font-family: Lato; }`],
-  
+   
 })
 export class MainComponent implements OnChanges, DoCheck, OnInit, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, OnDestroy {
   child1: string;
@@ -18,36 +18,36 @@ export class MainComponent implements OnChanges, DoCheck, OnInit, AfterContentCh
     console.log("**********************************Main Component view checked");
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    console.log("MainComponent ngOnChanges :", changes);
-  }
+  // ngOnChanges(changes: SimpleChanges) {
+  //   console.log("MainComponent ngOnChanges :", changes);
+  // }
 
-  ngDoCheck() {
-    console.log("MainComponent ngDoCheck :");
-  }
+  // ngDoCheck() {
+  //   console.log("MainComponent ngDoCheck :");
+  // }
 
-  ngOnInit() {
-    console.log("MainComponent ngOnInit :");
-  }
+  // ngOnInit() {
+  //   console.log("MainComponent ngOnInit :");
+  // }
 
-  ngAfterContentInit() {
-    console.log("MainComponent ngAfterContentInit :");
-  }
+  // ngAfterContentInit() {
+  //   console.log("MainComponent ngAfterContentInit :");
+  // }
 
-  ngAfterContentChecked() {
-    console.log("MainComponent ngAfterContentChecked :");
-  }
+  // ngAfterContentChecked() {
+  //   console.log("MainComponent ngAfterContentChecked :");
+  // }
 
-  ngAfterViewInit() {
-    console.log("MainComponent ngAfterViewInit :");
-  }
+  // ngAfterViewInit() {
+  //   console.log("MainComponent ngAfterViewInit :");
+  // }
 
-  ngAfterViewChecked() {
-    console.log("MainComponent ngAfterViewChecked :");
-  }
+  // ngAfterViewChecked() {
+  //   console.log("MainComponent ngAfterViewChecked :");
+  // }
 
-  ngOnDestroy() {
-    console.log("MainComponent ngOnDestroy :");
-  }
+  // ngOnDestroy() {
+  //   console.log("MainComponent ngOnDestroy :");
+  // }
 
 }

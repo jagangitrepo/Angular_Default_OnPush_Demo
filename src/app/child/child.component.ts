@@ -4,7 +4,7 @@ import { Component, Input, OnChanges, SimpleChanges, DoCheck, ChangeDetectionStr
   selector: 'child',
   template: `<subchild [name]="subchild1"></subchild>  <subchild [name]="subchild2"></subchild> <p>{{ check() }}</p> `,
   styles: [`h1 { font-family: Lato; }`],
-     changeDetection:ChangeDetectionStrategy.OnPush  
+    changeDetection:ChangeDetectionStrategy.OnPush 
 })
 export class ChildComponent implements OnChanges, DoCheck, OnInit, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, OnDestroy {
   @Input()
@@ -21,13 +21,13 @@ check()
   console.log("***************************************Child " + this.name  + " Component view checked");
 }
 
-  ngOnChanges(changes: SimpleChanges) {
-    console.log("-------->ChildComponent: ", this.name, " ngOnChanges :", changes);
-  }
+  // ngOnChanges(changes: SimpleChanges) {
+  //   console.log("-------->ChildComponent: ", this.name, " ngOnChanges :", changes);
+  // }
 
-  ngDoCheck() {
-    console.log("-------->ChildComponent: ", this.name, " ngDoCheck :");
-  }
+  // ngDoCheck() {
+  //   console.log("-------->ChildComponent: ", this.name, " ngDoCheck :");
+  // }
 
   ngOnInit() {
     console.log("-------->ChildComponent: ", this.name, " ngOnInit :");
@@ -35,24 +35,24 @@ check()
     this.subchild2 = this.name + " subchild2";
   }
 
-  ngAfterContentInit() {
-    console.log("-------->ChildComponent: ", this.name, " ngAfterContentInit :");
-  }
+  // ngAfterContentInit() {
+  //   console.log("-------->ChildComponent: ", this.name, " ngAfterContentInit :");
+  // }
 
-  ngAfterContentChecked() {
-    console.log("-------->ChildComponent: ", this.name, " ngAfterContentChecked :");
-  }
+  // ngAfterContentChecked() {
+  //   console.log("-------->ChildComponent: ", this.name, " ngAfterContentChecked :");
+  // }
 
-  ngAfterViewInit() {
-    console.log("-------->ChildComponent: ", this.name, " ngAfterViewInit :");
-  }
+  // ngAfterViewInit() {
+  //   console.log("-------->ChildComponent: ", this.name, " ngAfterViewInit :");
+  // }
 
-  ngAfterViewChecked() {
-    console.log("-------->ChildComponent: ", this.name, " ngAfterViewChecked :");
+  // ngAfterViewChecked() {
+  //   console.log("-------->ChildComponent: ", this.name, " ngAfterViewChecked :");
 
-  }
+  // }
 
-  ngOnDestroy() {
-    console.log("-------->ChildComponent: ", this.name, " ngOnDestroy :");
-  }
+  // ngOnDestroy() {
+  //   console.log("-------->ChildComponent: ", this.name, " ngOnDestroy :");
+  // }
 }
