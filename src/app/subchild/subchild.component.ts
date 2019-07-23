@@ -54,5 +54,6 @@ check()
   trigger()
   {
     //this.cd.markForCheck();
+    this.name += " updated...";
   }
 }
